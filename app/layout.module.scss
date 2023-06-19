@@ -16,7 +16,16 @@
 @media screen and (max-width: 768px) {
   .main {
     .content {
-      margin-bottom: 400px;
+      margin-bottom: 50vh;
     }
   }
 }
+
+@media screen and (max-width: 668px) {
+  .main {
+    .content {
+      margin-bottom: 70vh;
+    }
+  }
+}
+

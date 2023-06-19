@@ -32,10 +32,28 @@
 
 @media screen and (max-width: 768px) {
   .footer {
-    height: 500px;
+    height: 60vh;
     .content {
-      height: 400px;
+      height: 50vh;
       grid-template-columns: 1fr 1fr;
+      gap: 0px;
+      .column {
+        padding: 4px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .footer {
+    height: 75vh;
+    .content {
+      height: 70vh;
+      grid-template-columns: 1fr;
+      gap: 0px;
+      .column {
+        padding: 4px 0;
+      }
     }
   }
 }
