@@ -1,0 +1,202 @@
+:root {
+  --snow-0: #ffffff;
+  --snow-1: #f2f4f5;
+  --snow-2: #dce2e4;
+  --snow-3: #c5cfd3;
+  --snow-4: #aebcc2;
+  --snow-5: #96a8b0;
+  --snow-6: #7f959f;
+  --snow-7: #69818c;
+  --snow-8: #586b74;
+  --snow-9: #46565d;
+  --snow-10: #354146;
+  --snow-11: #27262c;
+  --snow-12: #121517;
+
+  --primary-foreground: var(--snow-11);
+  --secondary-foreground: var(--snow-8);
+  --foreground-gradient: linear-gradient(
+    178deg,
+    var(--primary-foreground) 0%,
+    var(--brand-light) 100%
+  );
+
+  --background: var(--snow-1);
+  --lifted-background: var(--snow-0);
+
+  --button-foreground: var(--snow-11);
+  --button-foreground-hover: var(--snow-12);
+  --button-background: var(--snow-2);
+  --button-background-hover: var(--snow-3);
+  --button-outline: var(--snow-8);
+  --button-outline-hover: var(--snow-9);
+  --button-primary-background: var(--brand);
+  --button-primary-background-hover: var(--brand-dark);
+  --button-destructive-background: var(--error);
+  --button-destructive-foreground: var(--error-lighter);
+  --button-destructive-background-hover: var(--error-dark);
+
+  --border-color: var(--snow-2);
+  --border: 2px solid var(--border-color);
+
+  --brand-lighter: #9ac1d0;
+  --brand-light: #3e798e;
+  --brand: #326273;
+  --brand-dark: #254855;
+
+  --accent: #e76f51;
+
+  --outline-color: var(--brand);
+
+  --error-lighter: #f7d4d6;
+  --error-light: #f33;
+  --error: red;
+  --error-dark: #e60000;
+
+  --main-content-width: 60rem;
+  --space-xxs: 0.125rem; /* Extra extra small */
+  --space-xs: 0.25rem; /* Extra small */
+  --space-sm: 0.5rem; /* Small */
+  --space-md: 1rem; /* Medium */
+  --space-lg: 1.5rem; /* Large */
+  --space-xl: 2rem; /* Extra large */
+  --space-xxl: 3rem; /* Extra extra large */
+
+  --radius: 12px;
+
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  /* Font sizes */
+  --font-xs: clamp(0.83rem, 0vw + 0.83rem, 0.83rem);
+  --font-sm: clamp(0.91rem, 0vw + 0.91rem, 0.91rem);
+  --font-base: clamp(1rem, 0vw + 1rem, 1rem);
+  --font-md: clamp(1.1rem, 0vw + 1.1rem, 1.1rem);
+  --font-lg: clamp(1.21rem, 0vw + 1.21rem, 1.21rem);
+  --font-xl: clamp(1.33rem, 0vw + 1.33rem, 1.33rem);
+
+  /* Transitions */
+  --transition: 200ms cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow: 400ms cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slower: 600ms cubic-bezier(0.25, 1, 0.5, 1);
+  --stagger: 0;
+  --delay: 120ms;
+  --start: 0ms;
+
+  /* Shadows */
+  --shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.07);
+  --nav-shadow: rgba(178, 183, 190, 0.15) 0px 5px 10px 0px;
+}
+
+[data-theme="dark"] {
+  --primary-foreground: #e6e7ed;
+  --secondary-foreground: #97989e;
+
+  --background: #1e2024;
+  --lifted-background: #303237;
+
+  --button-foreground: var(--snow-1);
+  --button-background: var(--snow-10);
+  --button-background-hover: var(--snow-9);
+  --button-outline: var(--snow-4);
+  --button-outline-hover: var(--snow-3);
+  --button-primary-background: var(--brand);
+  --button-primary-background-hover: var(--brand-light);
+  --button-destructive-background: var(--error);
+  --button-destructive-foreground: var(--error-lighter);
+  --button-destructive-background-hover: var(--error-light);
+
+  --border-color: #393b41;
+  --border: 1px solid var(--border-color);
+
+  --brand: #326273;
+
+  --outline-color: var(--brand-lighter);
+
+  --shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.2);
+  --nav-shadow: rgba(11, 11, 11, 0.15) 0px 5px 10px 0px;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--background);
+  color: var(--primary-foreground);
+  font-size: var(--font-base);
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background); /* WebKit/Blink Browsers */
+  -webkit-text-fill-color: var(--background);
+}
+::-moz-selection {
+  background: var(--accent);
+  color: var(--background); /* WebKit/Blink Browsers */
+  -webkit-text-fill-color: var(--background);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

@@ -1,0 +1,22 @@
+.main {
+  position: relative;
+  isolation: isolate;
+  .content {
+    min-height: 100vh;
+    max-width: 96rem;
+    margin: 0 auto;
+    margin-bottom: 350px;
+    width: 100%;
+    padding: 80px 16px;
+    background-color: var(--background);
+    box-shadow: var(--shadow);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    .content {
+      margin-bottom: 400px;
+    }
+  }
+}
