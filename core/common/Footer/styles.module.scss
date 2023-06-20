@@ -6,7 +6,7 @@
   .content {
     width: 100%;
     max-width: var(--main-content-width);
-    padding: 40px;
+    padding: 40px var(--inner-padding) 40px var(--inner-padding);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,8 @@
       flex-direction: column;
       gap: 8px;
       padding: 8px 0;
-      font-size: var(--font-sm);
+      font-weight: 600;
+
     }
   }
   .copyright {
@@ -43,7 +44,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: var(--main-content-width);
-    padding: 0 40px 40px 40px;
+    padding: 0 var(--inner-padding) 40px var(--inner-padding);
     margin: 0 auto;
   }
 }

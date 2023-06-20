@@ -8,6 +8,7 @@ export default function Home() {
     <>
       <section className={styles.section}>
         <div className={styles.hero}>
+          <div className={styles.circle} />
           <span className={styles.badge}>In the works</span>
           <h1 className={styles.title}>Snow Mouse Studio</h1>
           <div className={styles.subtitle}>
@@ -22,7 +23,7 @@ export default function Home() {
               <Button>Explore</Button>
             </Link>
             <Link href="/portfolio">
-              <Button variant="primary">Portfolio</Button>
+              <GradientButton>Portfolio</GradientButton>
             </Link>
           </div>
         </div>
