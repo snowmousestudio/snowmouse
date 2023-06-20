@@ -1,0 +1,58 @@
+.wrapper {
+  isolation: isolate;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  cursor: pointer;
+  &:hover {
+    & > .information {
+      opacity: 1;
+      backdrop-filter: blur(20px);
+      & .title,
+      .description {
+        opacity: 1;
+        translate: 0 0px;
+      }
+    }
+  }
+  .image {
+    height: auto;
+    transition: scale var(--transition-slower);
+    scale: 110%;
+    translate: 0 -5%;
+  }
+  .information {
+    isolation: isolate;
+    position: absolute;
+    inset: 0;
+    color: var(--fg);
+    overflow: hidden;
+    backdrop-filter: blur(0);
+    opacity: 0;
+    transition: opacity var(--transition-slow),
+      backdrop-filter var(--transition);
+    & > * + * {
+      margin-block-start: 0.25rem;
+    }
+    .content {
+      padding: 24px;
+    }
+    &::before {
+      position: absolute;
+      inset: 0px;
+      content: "";
+      z-index: -1;
+      background-color: var(--bg);
+      opacity: 0.7;
+    }
+    & .title,
+    .description {
+      translate: 0 10px;
+      opacity: 0;
+      transition: opacity var(--transition-slow),
+        translate var(--transition-slow);
+      transition-delay: 0.6;
+    }
+  }
+}

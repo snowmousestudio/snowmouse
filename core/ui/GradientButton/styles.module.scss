@@ -1,0 +1,59 @@
+.herobuttoncontainer {
+  position: relative;
+  max-width: max-content;
+  min-width: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  /* Stacking gradients appears to make the top one disappear. */
+  z-index: 1;
+}
+
+.herobuttonbg {
+  background: var(--fg-gradient);
+  border-radius: 32px;
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -2;
+}
+
+.herobuttonbg:before {
+  background: var(--fg-gradient);
+  border: 8px solid transparent;
+  border-radius: 32px;
+  background-clip: padding-box;
+  content: "";
+  filter: blur(24px);
+  inset: 0;
+  opacity: 0.8;
+  position: absolute;
+  z-index: -1;
+}
+
+.herogradientbutton {
+  background-color: var(--bg) !important;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 4px 0 #00000010;
+  border-radius: 32px;
+  padding: 0 32px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--fg);
+  transition: color var(--transition-slow),
+    background-color var(--transition-slow), box-shadow var(--transition-slow);
+  cursor: pointer;
+}
+
+.herogradientbutton:hover {
+  background-color: transparent !important;
+  color: var(--bg);
+}
+
+.herogradientbutton:hover svg {
+  translate: 4px 0;
+}
