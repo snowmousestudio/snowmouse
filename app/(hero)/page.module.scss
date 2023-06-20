@@ -1,9 +1,10 @@
 .section {
   // background: var(--bg-gradient);
   min-height: 804px;
-  padding: 0 40px;
+  padding: 0 var(--inner-padding);
+  overflow: hidden;
   .hero {
-    flex: 1;
+    position: relative;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -13,6 +14,15 @@
     margin: 0 auto;
     padding-top: 200px;
     text-align: center;
+    .circle {
+      border: 2px dashed var(--border-color);
+      border-radius: 50%;
+      position: absolute;
+      margin: auto;
+      height: 100%;
+      aspect-ratio: 1;
+      z-index: -1;
+    }
     .badge {
       background-color: var(--accent);
       color: #ffffff;
@@ -22,14 +32,14 @@
     }
     .title {
       line-height: 1.2;
-      font-weight: 800;
+      font-weight: 750;
       font-size: max(48px, min(5vw, 76px));
       background: var(--fg-gradient);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       width: 100%;
-      letter-spacing: -0.05em;
+      letter-spacing: -0.025em;
     }
     .subtitle {
       font-size: max(15px, min(2vw, 20px));
@@ -42,6 +52,14 @@
       align-items: center;
       gap: 16px;
       margin: 16px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    .hero {
+      padding-top: 100px;
     }
   }
 }
