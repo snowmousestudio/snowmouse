@@ -1,6 +1,6 @@
 .hero {
-  height: calc(100vh - 10rem); /* Accomodates global margin of 10rem */
-  padding-bottom: 10rem;
+  height: calc(100vh - 200px); /* Accomodates global margin of 10rem */
+  margin-bottom: 106px /* Accomodates height of navbar */;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -31,7 +31,109 @@
   .actions {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: var(--space-md);
     margin: var(--space-md);
   }
 }
+
+.section {
+  display: flex;
+  flex-flow: column;
+
+  .grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    .item {
+      background-color: var(--button-primary-background);
+      border-radius: 36px;
+      padding: 24px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      aspect-ratio: 1;
+      h2 {
+        --font-xxxl: max(32px, min(4vw, 40px));
+        font-size: var(--font-xxxl);
+        color: #ffffff;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-rows: auto;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+/* Used to create a star border around the button */
+/*
+.button {
+  --spark-time: 3s;
+  --border-radius: 999px;
+
+  border: none;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 24px;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 100px 0 0 var(--button-primary-outline) inset;
+
+  .spark {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--border-radius);
+    rotate: 0deg;
+    mask-image: linear-gradient(white, transparent 50%);
+    animation: flip calc(var(--spark-time) * 2) infinite steps(2, end);
+  }
+  .spark::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    aspect-ratio: 1;
+    inset: 0 auto auto 50%;
+    z-index: -1;
+    translate: -50% -15%;
+    rotate: -90deg;
+    opacity: 1;
+    background-image: conic-gradient(
+      from 0deg,
+      transparent 0 340deg,
+      var(--spark-color) 360deg
+    );
+    animation: rotate var(--spark-time) linear infinite both;
+  }
+
+  @keyframes flip {
+    to {
+      rotate: 360deg;
+    }
+  }
+  @keyframes rotate {
+    to {
+      transform: rotate(180deg);
+    }
+  }
+
+  .backdrop {
+    position: absolute;
+    inset: 2px;
+    background-color: var(--button-primary-background);
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-slower);
+  }
+  &:hover > .backdrop {
+    background-color: var(--button-primary-background-hover);
+  }
+
+  .text {
+    z-index: 1;
+    color: #ffffff;
+  }
+}
+*/

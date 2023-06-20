@@ -15,8 +15,14 @@
 
   --primary-foreground: var(--snow-11);
   --secondary-foreground: var(--snow-8);
+
   --foreground-gradient: linear-gradient(
     178deg,
+    var(--primary-foreground) 0%,
+    var(--brand-light) 100%
+  );
+  --foreground-gradient-hover: linear-gradient(
+    220deg,
     var(--primary-foreground) 0%,
     var(--brand-light) 100%
   );
@@ -36,8 +42,12 @@
   --button-destructive-foreground: var(--error-lighter);
   --button-destructive-background-hover: var(--error-dark);
 
+  --spark-color: var(--brand-lighter);
+
   --border-color: var(--snow-2);
   --border: 2px solid var(--border-color);
+
+  --border-radius: 16px;
 
   --brand-lighter: #9ac1d0;
   --brand-light: #3e798e;
@@ -113,6 +123,8 @@
   --brand: #326273;
 
   --outline-color: var(--brand-lighter);
+
+  --spark-color: var(--snow-1);
 
   --shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.2);
   --nav-shadow: rgba(11, 11, 11, 0.15) 0px 5px 10px 0px;

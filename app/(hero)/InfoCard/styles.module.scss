@@ -1,0 +1,77 @@
+.root {
+  isolation: isolate;
+  background-color: var(--lifted-background);
+  aspect-ratio: 1;
+  height: auto;
+  border-radius: 36px;
+  overflow: hidden;
+  position: relative;
+  .image {
+    height: inherit;
+    position: absolute;
+    inset: 0;
+  }
+  .hero {
+    opacity: 0;
+    background-color: var(--accent);
+    position: absolute;
+    inset: 0;
+    overflow-y: auto;
+    padding: 24px;
+    padding-top: 36px;
+    z-index: 1;
+    color: #ffffff;
+    transition: opacity var(--transition-slower);
+    & > * + * {
+      margin-block-start: 1rem;
+    }
+    &.open {
+      opacity: 1;
+    }
+  }
+  .button {
+    isolation: isolate;
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    border-radius: 50%;
+    padding: 0;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+    color: #ffffff;
+    overflow: hidden;
+    z-index: 2;
+    transition: background-color var(--transition-slower);
+    &:focus {
+      box-shadow: none;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+    &.open {
+      background-color: #ffffff;
+      color: var(--accent);
+      &::before {
+        background-color: transparent;
+        opacity: 1;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0px;
+      content: "";
+      z-index: -1;
+      background-color: black;
+      opacity: 0.3;
+      transition: opacity var(--transition-slow),
+        background-color var(--transition-slower);
+    }
+    &:hover::before {
+      opacity: 0.5;
+    }
+  }
+}

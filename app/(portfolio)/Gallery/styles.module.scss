@@ -40,7 +40,7 @@
     }
     &::before {
       position: absolute;
-      inset: -24px;
+      inset: 0px;
       content: "";
       z-index: -1;
       background-color: var(--background);

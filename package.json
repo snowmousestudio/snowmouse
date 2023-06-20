@@ -18,6 +18,7 @@
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.6",
     "framer-motion": "^10.12.16",
+    "lucide-react": "^0.246.0",
     "next": "13.4.6",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
