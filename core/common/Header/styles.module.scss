@@ -9,7 +9,7 @@
   z-index: 3000;
   padding: 0 var(--inner-padding);
   height: 64px;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(25px);
   overflow: hidden;
   font-size: var(--font-xs);
   &::before {

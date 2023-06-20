@@ -26,7 +26,9 @@ export default function Header() {
   return (
     <motion.header className={styles.header} layoutRoot>
       <nav>
-        <h3 className={styles.logo}>Snow Mouse Studio</h3>
+        <Link href="/">
+          <h3 className={styles.logo}>Snow Mouse Studio</h3>
+        </Link>
         <div className={styles.linkwrapper}>
           {links.map(({ href, text }, index) => {
             const active = href === pathname;

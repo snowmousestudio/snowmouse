@@ -9,6 +9,8 @@ export default function Home() {
       <section className={styles.section}>
         <div className={styles.hero}>
           <div className={styles.circle} />
+          <div className={styles.circle} style={{ height: "80%" }} />
+          <div className={styles.circle} style={{ height: "60%" }} />
           <span className={styles.badge}>In the works</span>
           <h1 className={styles.title}>Snow Mouse Studio</h1>
           <div className={styles.subtitle}>
