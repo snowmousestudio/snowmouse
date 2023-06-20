@@ -1,25 +1,18 @@
 .section {
-  background: var(--bg-gradient);
+  // background: var(--bg-gradient);
   min-height: 804px;
-  padding: 0 16px;
-  .herowrapper {
-    display: flex;
-    align-items: flex-start;
-    max-width: var(--main-content-width);
-    margin: 0 auto;
-    padding-top: 200px;
-  }
-  .heroimage {
-    flex: 1;
-  }
+  padding: 0 40px;
   .hero {
     flex: 1;
     display: flex;
     flex-flow: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: var(--space-lg);
-
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-top: 200px;
+    text-align: center;
     .badge {
       background-color: var(--accent);
       color: #ffffff;
@@ -29,16 +22,20 @@
     }
     .title {
       line-height: 1.2;
-      font-size: var(--font-xxl);
+      font-weight: 800;
+      font-size: max(48px, min(5vw, 76px));
       background: var(--fg-gradient);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       width: 100%;
+      letter-spacing: -0.05em;
     }
     .subtitle {
+      font-size: max(15px, min(2vw, 20px));
       line-height: 1.8;
       width: 100%;
+      letter-spacing: -0.01em;
     }
     .actions {
       display: flex;

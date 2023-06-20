@@ -6,15 +6,25 @@
   .content {
     width: 100%;
     max-width: var(--main-content-width);
-    padding: 40px 16px;
+    padding: 40px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     .logo {
       flex: 1;
+      margin-bottom: 20px;
+    }
+    .links {
+      --grid-min: 18%;
+      --menu-margin: clamp(10px, 4vw, 20px);
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(var(--grid-min), 1fr));
+      grid-gap: 24px;
+      border-bottom: 1px dashed var(--border-color);
+      padding-bottom: 40px;
     }
     .column {
-      flex: 1;
       color: var(--fg);
       h5 {
         font-weight: 500;
@@ -33,7 +43,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: var(--main-content-width);
-    padding: 24px 16px;
+    padding: 0 40px 40px 40px;
     margin: 0 auto;
   }
 }
