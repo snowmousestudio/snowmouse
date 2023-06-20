@@ -1,12 +1,12 @@
 .footer {
   width: 100%;
-  background-color: var(--sunken-background);
+  background-color: var(--footer-background);
   display: flex;
   flex-direction: column;
-  padding: 80px 16px;
   .content {
     width: 100%;
     max-width: var(--main-content-width);
+    padding: 40px 16px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -15,9 +15,10 @@
     }
     .column {
       flex: 1;
+      color: var(--fg);
       h5 {
         font-weight: 500;
-        color: var(--secondary-foreground);
+        color: var(--sub-fg);
       }
       display: flex;
       flex-direction: column;
@@ -25,5 +26,14 @@
       padding: 8px 0;
       font-size: var(--font-sm);
     }
+  }
+  .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--main-content-width);
+    padding: 24px 16px;
+    margin: 0 auto;
   }
 }

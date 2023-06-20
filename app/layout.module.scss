@@ -2,24 +2,6 @@
   min-height: 100vh;
   max-width: 96rem;
   margin: 0 auto;
-  padding: 80px 16px 80px 16px;
   width: 100%;
-  background-color: var(--background);
-  box-shadow: var(--shadow);
-}
-
-@media screen and (max-width: 768px) {
-  .main {
-    .content {
-      margin-bottom: 60vh;
-    }
-  }
-}
-
-@media screen and (max-width: 668px) {
-  .main {
-    .content {
-      margin-bottom: 70vh;
-    }
-  }
+  border-bottom: 1px solid var(--border-color);
 }

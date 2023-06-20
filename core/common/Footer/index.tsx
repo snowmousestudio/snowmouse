@@ -1,3 +1,4 @@
+import ThemeSwitch from "../ThemeSwitch";
 import styles from "./styles.module.scss";
 
 export default function Footer() {
@@ -23,6 +24,10 @@ export default function Footer() {
           <a>JS</a>
           <a>Rajbir</a>
         </div>
+      </div>
+      <div className={styles.copyright}>
+        <small>© 2023 Snow Mouse Studio</small>
+        <ThemeSwitch />
       </div>
     </footer>
   );

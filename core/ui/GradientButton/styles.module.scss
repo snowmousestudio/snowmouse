@@ -11,7 +11,7 @@
 }
 
 .herobuttonbg {
-  background: var(--foreground-gradient);
+  background: var(--fg-gradient);
   border-radius: 32px;
   content: "";
   height: 100%;
@@ -21,7 +21,7 @@
 }
 
 .herobuttonbg:before {
-  background: var(--foreground-gradient);
+  background: var(--fg-gradient);
   border: 8px solid transparent;
   border-radius: 32px;
   background-clip: padding-box;
@@ -34,7 +34,7 @@
 }
 
 .herogradientbutton {
-  background-color: var(--background) !important;
+  background-color: var(--bg) !important;
   background-clip: padding-box;
   border: 2px solid transparent;
   box-shadow: 0 4px 4px 0 #00000010;
@@ -43,16 +43,15 @@
   height: 44px;
   display: inline-flex;
   align-items: center;
-  color: var(--primary-foreground);
+  color: var(--fg);
   transition: color var(--transition-slow),
     background-color var(--transition-slow), box-shadow var(--transition-slow);
-
   cursor: pointer;
 }
 
 .herogradientbutton:hover {
   background-color: transparent !important;
-  color: var(--background);
+  color: var(--bg);
 }
 
 .herogradientbutton:hover svg {

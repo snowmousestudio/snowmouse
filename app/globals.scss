@@ -13,42 +13,33 @@
   --snow-11: #27262c;
   --snow-12: #121517;
 
-  --primary-foreground: var(--snow-11);
-  --secondary-foreground: var(--snow-8);
+  --fg: var(--snow-11);
+  --sub-fg: var(--snow-8);
+  --fg-gradient: linear-gradient(178deg, var(--fg) 0%, var(--brand-light) 100%);
 
-  --foreground-gradient: linear-gradient(
-    178deg,
-    var(--primary-foreground) 0%,
-    var(--brand-light) 100%
+  --bg: var(--snow-1);
+  --sub-bg: var(--snow-2);
+  --header-bg: var(--snow-1);
+  --footer-bg: var(--snow-1);
+  --bg-gradient: linear-gradient(180deg, var(--bg) 0%, #e6edee 100%);
+  --bg-gradient-reverse: linear-gradient(
+    180deg,
+    var(--sub-bg) 0%,
+    var(--bg) 100%
   );
-  --foreground-gradient-hover: linear-gradient(
-    220deg,
-    var(--primary-foreground) 0%,
-    var(--brand-light) 100%
-  );
-
-  --sunken-background: var(--snow-2);
-  --background: var(--snow-1);
-  --lifted-background: var(--snow-0);
-
-  --button-foreground: var(--snow-11);
-  --button-foreground-hover: var(--snow-12);
-  --button-background: var(--snow-2);
-  --button-background-hover: var(--snow-3);
-  --button-outline: var(--snow-8);
-  --button-outline-hover: var(--snow-9);
-  --button-primary-background: var(--brand);
-  --button-primary-background-hover: var(--brand-dark);
-  --button-destructive-background: var(--error);
-  --button-destructive-foreground: var(--error-lighter);
-  --button-destructive-background-hover: var(--error-dark);
-
-  --spark-color: var(--brand-lighter);
+  --button-bg: var(--snow-2);
+  --button-bg-hover: var(--snow-3);
+  --button-outline: var(--snow-2);
+  --button-outline-hover: var(--snow-11);
+  --button-fg: var(--snow-11);
+  --button-primary-bg: var(--brand);
+  --button-primary-bg-hover: var(--brand-dark);
+  --button-destructive-bg: var(--error);
+  --button-destructive-bg-hover: var(--error-dark);
+  --button-destructive-fg: var(--snow-0);
 
   --border-color: var(--snow-2);
-  --border: 2px solid var(--border-color);
-
-  --border-radius: 16px;
+  --border: 1px solid var(--border-color);
 
   --brand-lighter: #9ac1d0;
   --brand-light: #3e798e;
@@ -56,8 +47,6 @@
   --brand-dark: #254855;
 
   --accent: #e76f51;
-
-  --outline-color: var(--brand);
 
   --error-lighter: #f7d4d6;
   --error-light: #f33;
@@ -73,7 +62,9 @@
   --space-xl: 2rem; /* Extra large */
   --space-xxl: 3rem; /* Extra extra large */
 
+  --radius-sm: 8px;
   --radius: 12px;
+  --radius-lg: 30px;
 
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
@@ -102,23 +93,29 @@
 }
 
 [data-theme="dark"] {
-  --primary-foreground: #e6e7ed;
-  --secondary-foreground: #97989e;
+  --fg: #e6e7ed;
+  --sub-fg: #97989e;
 
-  --sunken-background: var(--snow-11);
-  --background: #1e2024;
-  --lifted-background: #303237;
-
-  --button-foreground: var(--snow-1);
-  --button-background: var(--snow-10);
-  --button-background-hover: var(--snow-9);
-  --button-outline: var(--snow-4);
-  --button-outline-hover: var(--snow-3);
-  --button-primary-background: var(--brand);
-  --button-primary-background-hover: var(--brand-light);
-  --button-destructive-background: var(--error);
-  --button-destructive-foreground: var(--error-lighter);
-  --button-destructive-background-hover: var(--error-light);
+  --bg: #1e2024;
+  --sub-bg: #303237;
+  --header-bg: var(--bg);
+  --footer-bg: var(--bg);
+  --bg-gradient: linear-gradient(180deg, var(--bg) 0%, #28292d 100%);
+  --bg-gradient-reverse: linear-gradient(
+    180deg,
+    var(--sub-bg) 0%,
+    var(--bg) 100%
+  );
+  --button-bg: var(--snow-10);
+  --button-bg-hover: var(--snow-9);
+  --button-outline: var(--snow-11);
+  --button-outline-hover: var(--snow-2);
+  --button-fg: var(--fg);
+  --button-primary-bg: var(--brand);
+  --button-primary-bg-hover: var(--brand-light);
+  --button-destructive-bg: var(--error);
+  --button-destructive-bg-hover: var(--error-dark);
+  --button-destructive-fg: var(--snow-0);
 
   --border-color: #393b41;
   --border: 1px solid var(--border-color);
@@ -155,8 +152,8 @@
 body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--background);
-  color: var(--primary-foreground);
+  background-color: var(--bg);
+  color: var(--sub-fg);
   font-size: var(--font-base);
 }
 /*
@@ -191,6 +188,42 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  position: relative;
+  letter-spacing: 0.025em;
+  color: var(--fg);
+}
+
+h1 {
+  font-size: var(--font-xl);
+}
+
+h2 {
+  font-size: var(--font-lg);
+}
+
+h3 {
+  font-size: var(--font-md);
+}
+
+h4 {
+  font-size: var(--font-base);
+}
+
+h5 {
+  font-size: var(--font-sm);
+}
+
+h6 {
+  font-size: var(--font-xs);
+}
 /*
   8. Create a root stacking context
 */
@@ -201,13 +234,13 @@ h6 {
 
 ::selection {
   background: var(--accent);
-  color: var(--background); /* WebKit/Blink Browsers */
-  -webkit-text-fill-color: var(--background);
+  color: var(--bg); /* WebKit/Blink Browsers */
+  -webkit-text-fill-color: var(--bg);
 }
 ::-moz-selection {
   background: var(--accent);
-  color: var(--background); /* WebKit/Blink Browsers */
-  -webkit-text-fill-color: var(--background);
+  color: var(--bg); /* WebKit/Blink Browsers */
+  -webkit-text-fill-color: var(--bg);
 }
 
 @media (prefers-color-scheme: dark) {

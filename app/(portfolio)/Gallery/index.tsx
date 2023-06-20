@@ -48,9 +48,9 @@ export default function Gallery() {
     <Mosaic
       items={images}
       config={{
-        columns: [1, 2, 3],
-        gap: [20, 20, 20],
-        media: [768, 1068, 1268],
+        columns: [1, 2, 3, 4],
+        gap: [20, 20, 20, 20],
+        media: [668, 868, 1068, 1268],
       }}
       render={(item, index) => (
         <motion.div
