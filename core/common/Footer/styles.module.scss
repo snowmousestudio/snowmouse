@@ -12,7 +12,9 @@
     flex-direction: column;
     .logo {
       flex: 1;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+      font-weight: 600;
+      font-size: var(--font-lg);
     }
     .links {
       --grid-min: 18%;
@@ -20,22 +22,16 @@
       flex: 1;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(var(--grid-min), 1fr));
-      grid-gap: 24px;
+      grid-gap: clamp(10px, 4vw, 20px);
       border-bottom: 1px dashed var(--border-color);
       padding-bottom: 40px;
     }
     .column {
       color: var(--fg);
-      h5 {
-        font-weight: 500;
-        color: var(--sub-fg);
-      }
       display: flex;
       flex-direction: column;
       gap: 8px;
-      padding: 8px 0;
-      font-weight: 600;
-
+      font-weight: 500;
     }
   }
   .copyright {
@@ -46,5 +42,15 @@
     max-width: var(--main-content-width);
     padding: 0 var(--inner-padding) 40px var(--inner-padding);
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .footer {
+    .content {
+      .links {
+        --grid-min: 40%;
+      }
+    }
   }
 }
