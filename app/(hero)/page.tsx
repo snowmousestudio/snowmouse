@@ -1,7 +1,7 @@
 import { Button } from "@/core/ui/Button";
 import styles from "./page.module.scss";
 import Link from "next/link";
-import GradientButton from "@/core/ui/GradientButton";
+import { GradientButton } from "@/core/ui/GradientButton";
 
 export default function Home() {
   return (
