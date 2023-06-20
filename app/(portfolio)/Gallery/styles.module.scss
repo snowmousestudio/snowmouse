@@ -2,7 +2,7 @@
   isolation: isolate;
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius);
+  border-radius: 30px;
   box-shadow: var(--shadow);
   cursor: pointer;
   &:hover {
@@ -36,7 +36,7 @@
       margin-block-start: 0.25rem;
     }
     .content {
-      padding: var(--space-md);
+      padding: 24px;
     }
     &::before {
       position: absolute;

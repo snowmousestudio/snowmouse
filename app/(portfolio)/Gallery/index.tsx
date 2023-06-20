@@ -19,7 +19,7 @@ export default function Gallery() {
     // target: ref,
     // offset: ["end end", "start start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "5%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   const images = [
     { src: mountain, alt: "Mountain" },
@@ -48,9 +48,9 @@ export default function Gallery() {
     <Mosaic
       items={images}
       config={{
-        columns: [1, 2, 3, 4],
-        gap: [12, 12, 12, 12],
-        media: [640, 768, 1024, 1280],
+        columns: [1, 2, 3],
+        gap: [20, 20, 20],
+        media: [768, 1068, 1268],
       }}
       render={(item, index) => (
         <motion.div

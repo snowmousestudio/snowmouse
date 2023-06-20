@@ -1,22 +1,17 @@
 .main {
-  position: relative;
-  isolation: isolate;
-  .content {
-    min-height: 100vh;
-    max-width: 96rem;
-    margin: 0 auto;
-    padding: 40px 16px 80px 16px;
-    margin-bottom: 350px;
-    width: 100%;
-    background-color: var(--background);
-    box-shadow: var(--shadow);
-  }
+  min-height: 100vh;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 80px 16px 80px 16px;
+  width: 100%;
+  background-color: var(--background);
+  box-shadow: var(--shadow);
 }
 
 @media screen and (max-width: 768px) {
   .main {
     .content {
-      margin-bottom: 50vh;
+      margin-bottom: 60vh;
     }
   }
 }

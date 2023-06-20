@@ -27,6 +27,7 @@
     var(--brand-light) 100%
   );
 
+  --sunken-background: var(--snow-2);
   --background: var(--snow-1);
   --lifted-background: var(--snow-0);
 
@@ -85,6 +86,7 @@
   --font-md: clamp(1.1rem, 0vw + 1.1rem, 1.1rem);
   --font-lg: clamp(1.21rem, 0vw + 1.21rem, 1.21rem);
   --font-xl: clamp(1.33rem, 0vw + 1.33rem, 1.33rem);
+  --font-xxl: clamp(2.4rem, 0vw + 2.4rem, 2.4rem);
 
   /* Transitions */
   --transition: 200ms cubic-bezier(0.25, 1, 0.5, 1);
@@ -103,6 +105,7 @@
   --primary-foreground: #e6e7ed;
   --secondary-foreground: #97989e;
 
+  --sunken-background: var(--snow-11);
   --background: #1e2024;
   --lifted-background: #303237;
 
