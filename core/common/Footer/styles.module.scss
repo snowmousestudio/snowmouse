@@ -12,7 +12,7 @@
     flex-direction: column;
     .logo {
       flex: 1;
-      margin-bottom: 24px;
+      margin-bottom: 40px;
       font-weight: 600;
       font-size: var(--font-lg);
     }
@@ -24,7 +24,7 @@
       grid-template-columns: repeat(auto-fill, minmax(var(--grid-min), 1fr));
       grid-gap: clamp(10px, 4vw, 20px);
       border-bottom: 1px dashed var(--border-color);
-      padding-bottom: 40px;
+      padding-bottom: 60px;
     }
     .column {
       color: var(--fg);
@@ -40,7 +40,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: var(--main-content-width);
-    padding: 0 var(--inner-padding) 40px var(--inner-padding);
+    padding: 20px var(--inner-padding) 80px var(--inner-padding);
     margin: 0 auto;
   }
 }

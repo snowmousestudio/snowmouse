@@ -22,6 +22,7 @@
       height: 100%;
       aspect-ratio: 1;
       z-index: -1;
+      animation: rotate 100s linear infinite;
     }
     .badge {
       background-color: var(--accent);
@@ -56,8 +57,18 @@
   }
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .section {
+    min-height: 720px;
     .hero {
       padding-top: 100px;
     }
