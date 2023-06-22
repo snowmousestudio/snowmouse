@@ -1,6 +1,6 @@
 .main {
   min-height: 100vh;
-  max-width: 96rem;
+  max-width: var(--main-content-width);
   margin: 0 auto;
   width: 100%;
   // border-bottom: 1px solid var(--border-color);
